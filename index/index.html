@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Agregamos Bootstrap al archivo -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <!-- Agregamos los iconos al archivo de la documentación de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+  <!-- Agregamos CSS al archivo -->
+  <link href="../styles/style.css" rel="stylesheet">
+
+  <!-- Agregamos la libreria scrollreveal para crear animaciones o transiciones -->
+  <script src="javaScript/scrollrevealLibreria.js"></script>
+
+  <!-- Titulo -->
+  <title>Spyware Project UMD</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../img/satelite.png">
+
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="author" content="Miguel Rayo">
+  <meta name="description" content="Pagina oficial del semillero de investigacion SPYWARE de la Universidad Minuto de Dios">
+  <meta name="keywords" content="HTML, CSS, JavaScript, React, Bootstrap, scrollreveal">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@900&family=Quicksand:wght@500&family=Roboto&family=Rubik+Dirt&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- **ELEMENTOS O ESTRUCTURA EXPLICITA** -->
+
+  <header>
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#">
+            <img src="../img/satelite.png" width="50" atl="Logo del semillero">
+          </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="glosario.html">Glosario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pildoras.html">Pildoras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cursos.html">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ver más
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="temasDeInteres.html">Temas de interes</a></li>
+                  <li><a class="dropdown-item" href="juegoConway.html" target="_blank" rel="noopener noreferrer">Juego de la vida</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <a class="nav-link" href="#">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seccion Hero -->
+    <section class="hero align-items-stretch">
+      <div class="hero-principal d-flex flex-column justity-content-center align-items-center scroll-hero">
+        <img class="hero-imagen-logo rounded-circle" src="../img/myAvatarSmall.png" alt="Logo del semillero">
+        <h1>SPYWARE PROJECT UMD</h1>
+        <h2>Semillero de investigación &#124; Programa ingeniería de sistemas</h2>
+      </div>
+      <div class="hero-inferior scroll-hero">
+        <img class="hero-inferior-imagen img-fluid" src="../img/computer.png" alt="Computador que mediante su contenido nos muestra imagenes alucivas a las tecnologias que abarca la programacion">
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Menu interno deslizable -->
+    <div class="contenedor-menu-deslizable alert alert-warning alert-dismissible fade show" role="alert">
+      <div class="menu-deslizable">
+        <ul>
+          <li><a class="dropdown-item" href="#sobre-nosotros">Sobre nosotros</a></li>
+          <li><a class="dropdown-item" href="#proyectos">Proyectos</a></li>
+          <li><a class="dropdown-item" href="#testimonios">Testimonios</a></li>
+          <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Seccion sobre nosotros -->
+    <section id="sobre-nosotros" class="sobre-nosotros seccion-oscura">
+      <div class="contenedor scroll-sobre-nosotros">
+        <h2 class="seccion-titulo">Conocenos</h2>
+        <p class="seccion-texto">Somos un grupo de trabajo interdisciplinario, inquietos en la búsqueda de conocimiento para generar habilidades aplicadas a la ingeniería en áreas del saber de la seguridad informática y de la información y las telecomunicaciones mediante la participación en eventos relacionados, talleres de formación, prácticas de laboratorio, y concientización de la importancia de la seguridad informática y de la información y las telecomunicaciones en vida cotidiana.</p>
+      </div>
+    </section>
+
+    <!-- Mision, Vision, ¿Te apuntas? -->
+    <section class="labor-proyeccion seccion-clara">
+      <div class="container text-center">
+        <div class="row"> <!-- Fila -->
+          <!-- Experiencia 1 -->
+          <div class="columna col-12 col-md-4"> <!-- Columna 1 -->
+            <i class="bi bi-alarm"></i>
+            <p class="proposito-titulo">Misión</p>
+            <p>Somos un grupo compuesto por estudiantes y docentes de la universidad UNIMINUTO, que ayuda a promover la capacidad investigativa y la generación de conocimiento mediante el estudio teórico y la aplicación de la seguridad de la información y seguridad informática para generar habilidad de trabajo en equipo, promover estudio permanente y facilitar la interacción entre lo académico y lo taxonómico.</p>
+            <div class="badges-contenedor">
+              <span class="badge text-bg-primary">Investigación</span>
+              <span class="badge text-bg-primary">Seguridad informática</span>
+              <span class="badge text-bg-primary">Conocimiento</span>
+            </div>
+          </div>
+
+          <!-- Experiencia 2 -->
+          <div class="columna col-12 col-md-4"> <!-- Columna 2 -->
+            <i class="bi bi-check2-square"></i>
+            <p class="proposito-titulo">Visión</p>
+            <p>Ser en el año 2022 un semillero de investigación de UNIMINUTO destacado en participación de eventos académicos, proceso de asesoría a empresas, y gestión de conocimiento en la sociedad estudiantil y académica en temas claves de seguridad informática y seguridad de la información mediante la generación de proyectos de investigación, artefactos de comunicaciones, y modelos de seguridad en IoT e IoE.</p>
+            <div class="badges-contenedor">
+              <span class="badge text-bg-primary">Proyectos</span>
+              <span class="badge text-bg-primary">Trabajo en equipo</span>
+              <span class="badge text-bg-primary">Comunicación</span>
+            </div>
+          </div>
+
+          <!-- Experiencia 3 -->
+          <div class="columna col-12 col-md-4"> <!-- Columna 3 -->
+            <i class="bi bi-person-lines-fill"></i>
+            <p class="proposito-titulo">¿Te apuntas?</p>
+            <p>Como parte de nuestro semillero, tendrás la oportunidad de trabajar en estrecha colaboración con profesionales experimentados y otros estudiantes talentosos, y aprenderás las últimas técnicas y herramientas utilizadas en la industria. Si estás listo para desafiar tus habilidades y convertirte en un experto en seguridad informática, ¡no dudes en unirte a nosotros!</p>
+            <div class="badges-contenedor">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_xEe4_vDkK8XUCZ2ufNSlV02DAiGC3waAJAnN2NM8ylbOuA/viewform" target="_blank" rel="noopener noreferrer">
+                <span class="badge text-bg-primary">Inscríbete aquí &#124; ¡Éxitos!</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+      <h2 class="seccion-titulo texto-negro text-center">Nuestro aporte</h2>
+      <h3 class="seccion-descripcion text-center">Estos son algunos proyectos a los que estamos y/o hemos estado vinculados</h3>
+      <!-- Galeria de proyectos -->
+      <div class="container text-center proyectos-contenedor">
+        <div class="row">
+          <!-- Proyecto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="../img/imgPrueba1.jpg" alt="proyecto 1">
+              <div class="overlay">
+                <p>Proyecto 1</p>
+                <div class="iconos-contenedor">
+                  <a href="../proyectosPdf/tallerDerivadas20231.pdf" target="_blank" rel="noopener noreferrer" download="taller-derivadas-20231">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  </a>
+                  <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-file-earmark-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="../img/imgPrueba2.jpg" alt="proyecto 2">
+              <div class="overlay">
+                <p>Proyecto 2</p>
+                <div class="iconos-contenedor">
+                  <a href="../proyectosPdf/tallerDerivadas20231.pdf" target="_blank" rel="noopener noreferrer" download="taller-derivadas-20231">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  </a>
+                  <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-file-earmark-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="../img/imgPrueba3.jpg" alt="proyecto 3">
+              <div class="overlay">
+                <p>Proyecto 3</p>
+                <div class="iconos-contenedor">
+                  <a href="../proyectosPdf/tallerDerivadas20231.pdf" target="_blank" rel="noopener noreferrer" download="taller-derivadas-20231">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  </a>
+                  <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-file-earmark-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 4 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="../img/imgPrueba4.jpg" alt="proyecto 4">
+              <div class="overlay">
+                <p>Proyecto 4</p>
+                <div class="iconos-contenedor">
+                  <a href="../proyectosPdf/tallerDerivadas20231.pdf" target="_blank" rel="noopener noreferrer" download="taller-derivadas-20231">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  </a>
+                  <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-file-earmark-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 5 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="../img/imgPrueba5.jpg" alt="proyecto 5">
+              <div class="overlay">
+                <p>Proyecto 5</p>
+                <div class="iconos-contenedor">
+                  <a href="../proyectosPdf/tallerDerivadas20231.pdf" target="_blank" rel="noopener noreferrer" download="taller-derivadas-20231">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  </a>
+                  <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-file-earmark-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 6 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="../img/imgPrueba6.jpg" alt="proyecto 6">
+              <div class="overlay">
+                <p>Proyecto 6</p>
+                <div class="iconos-contenedor">
+                  <a href="../proyectosPdf/tallerDerivadas20231.pdf" target="_blank" rel="noopener noreferrer" download="taller-derivadas-20231">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  </a>
+                  <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-file-earmark-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn-info">
+          Ver más proyectos
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </a>
+    </section>
+
+    <!-- Integrantes actuales | Nosotros | Testimonios -->
+    <section id="testimonios" class="testimonios seccion-clara">
+      <h2 class="seccion-titulo">Testimonios</h2>
+      <h3 class="seccion-descripcion text-center">Estos son algunos testimonios de los integrantes</h3>
+
+      <!-- Carrusel -->
+      <div id="testimonios-carrusel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="../img/myAvatarSmall.png" alt="Foto de Miguel Rayo, integrante del semillero">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, augue nec facilisis vulputate, urna lorem aliquam lorem, in sollicitudin ante augue vel libero. Nulla at risus mollis.</p>
+              <div class="testimonio-info">
+                <p class="integrante">Miguel Rayo</p>
+                <p class="cargo">Gerente de proyectos en desarrollo web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="../img/myAvatarSmall.png" alt="Foto de Miguel Rayo, integrante del semillero">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, augue nec facilisis vulputate, urna lorem aliquam lorem, in sollicitudin ante augue vel libero. Nulla at risus mollis.</p>
+              <div class="testimonio-info">
+                <p class="integrante">Daniel Rozo</p>
+                <p class="cargo">Gerente de proyectos creativos web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="../img/myAvatarSmall.png" alt="Foto de Miguel Rayo, integrante del semillero">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, augue nec facilisis vulputate, urna lorem aliquam lorem, in sollicitudin ante augue vel libero. Nulla at risus mollis.</p>
+              <div class="testimonio-info">
+                <p class="integrante">Carlos Murcia</p>
+                <p class="cargo">Gerente de proyectos inclusivos para la industria</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="../img/myAvatarSmall.png" alt="Foto de Miguel Rayo, integrante del semillero">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, augue nec facilisis vulputate, urna lorem aliquam lorem, in sollicitudin ante augue vel libero. Nulla at risus mollis.</p>
+              <div class="testimonio-info">
+                <p class="integrante">Sebastian Castillo</p>
+                <p class="cargo">Gerente de proyectos inclusivos para la industria</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Preguntas fecuentes -->
+    <section class="preguntas-frecuentes seccion-clara">
+      <p>
+        <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Preguntas frecuentes
+          <i class="bi bi-app-indicator"></i>
+        </button>
+      </p>
+      <div class="collapse seccion-compacta" id="collapseExample">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                ¿Cuantas convocatorias para ser integrante del semillero se hacen en el año?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                ¿Cual es la cantidad maxima de integrantes (cupos) que puede tener el semillero?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Pregunta #3 ¿****************************?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto seccion-oscura">
+    <div class="container">
+      <div class="container text-center rectangulo d-flex justify-content-evenly">
+        <div class="row"> <!-- Fila 1 -->
+          <div class="col-12 col-md-4 seccion-titulo"> <!-- Columna 1: Para dispositivos pequeños queremos que el elementos ocupe las 12 columnas de la grid de bootstrap, y a partir de medianos que sean 4 -->
+            Hablemos
+          </div>
+
+          <div class="col-12 col-md-4 descripcion"> <!-- Columna 2 -->
+            Contáctanos para iniciar tu proyecto de desarrollo web y haremos que tu vision se vuelva realidad.
+          </div>
+
+          <div class="col-12 col-md-4"> <!-- Columna 3 -->
+            <a href="mailto:2miguelray2005@gmail.com">
+              <button type="button">
+                Contacto
+                <i class="bi bi-envelope-check-fill"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de pagina (footer) -->
+  <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+    <img class="footer-logo" src="../img/satelite.png" alt="Logo de la web"> 
+    <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Únete a nuestro equipo y construyamos juntos el futuro de la tecnología.</p>
+    <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+      <a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-arrow-up-right-square-fill"></i>
+      </a>
+
+      <a href="https://www.youtube.com/@UNIMINUTOColombia" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-youtube"></i>
+      </a>
+
+      <a href="https://www.flickr.com/photos/87504636@N06/" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-person-workspace"></i>
+      </a>
+
+      <a href="https://twitter.com/UNIMINUTOCOL" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-twitter"></i>
+      </a>
+
+      <a href="https://www.facebook.com/UNIMINUTOCOLOMBIA?ref=hl" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-facebook"></i>
+      </a>
+
+      <a href="https://www.instagram.com/uniminutocol/?hl=es" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a href="mailto:2miguelray2005@gmail.com" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-envelope"></i>
+      </a>
+    </div>
+    
+    <div class="derechos-de-autor d-flex flex-column align-items-center justify-content-center text-center">
+      <p class="desarrollador">2023 SPYWARE PROJECT UMD &#169; &#124; All Rights Reserved</p>
+      <p><a href="https://www.flaticon.es/iconos-gratis/telecomunicacion" title="telecomunicacion iconos" target="_blank">Telecomunicacion iconos creados por Iconsea - Flaticon</a></p>
+      <p><a href="https://www.flaticon.es/iconos-gratis/galleta" title="galleta iconos" target="_blank">Galleta iconos creados por Freepik - Flaticon</a></p>
+    </div>
+  </footer>
+
+  <!-- **ELEMENTOS EXTRAS Y LOGICA DE PROGRAMACION** -->
+
+  <!-- Mensaje (alerta) de bienvenida -->
+  <div class="alerta-bienvenida alert alert-warning alert-dismissible fade show" role="alert">
+    <div class="contenido-bienvenida">
+      <p>¡BIENVENIDO</p>
+      <ul>
+        <li>COMPAÑERO!</li>
+        <li>PROFE!</li>
+        <li>USUARIO!</li>
+      </ul>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <!-- Aviso cookies -->
+  <div class="aviso-cookies" id="aviso-cookies">
+    <img class="galleta" src="../img/galleta.png" alt="Galleta">
+    <h3 class="titulo">Cookies</h3>
+    <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios</p>
+    <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+    <a class="enlace" href="https://www.modelosycontratos.com/modelo-aviso-cookies-pagina-web/" target="_blank" rel="noopener noreferrer">Aviso de cookies</a>
+  </div>
+  
+  <div class="fondo-fijo-aviso-cookies" id="fondo-fijo-aviso-cookies"></div>
+
+  <!-- Modal o pantalla emergente de la Ubicacion en el navegador o encabezado -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Universidad Minuto de Dios</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3976.412563148178!2d-74.0916582251568!3d4.698166695276836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDEnNTMuNCJOIDc0wrAwNScyMC43Ilc!5e0!3m2!1ses-419!2sco!4v1682314562917!5m2!1ses-419!2sco" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transicion del header o encabezado principal fijo (cambio de color) -->
+  <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var nav = document.querySelector("nav");
+      nav.classList.toggle("abajo", window.scrollY > 0);
+    })
+  </script>
+
+  <!-- Agregamos Bootstrap al archivo -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  <!-- Agregamos transiciones scrollreveal hechas con javaScript -->
+  <script src="javaScript/index.js"></script>
+
+  <!-- Agregamos el apartado aviso cookies hecho en javaScript -->
+  <script src="javaScript/avisoCookies.js"></script>
+</body>
+</html>

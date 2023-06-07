@@ -1,0 +1,783 @@
+/*************************/
+/*-- ESTILOS GENERALES --*/
+/*************************/
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif
+}
+
+.seccion-oscura {
+  color: white;
+  background-color: #0a0a23;
+}
+
+.seccion-clara {
+  color: black;
+  background-color: white;
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+.seccion-texto {
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+.btn-info {
+  font-size: 1.1rem;
+  margin: 20px;
+}
+
+.texto-negro {
+  color: black;
+}
+
+.texto-blanco {
+  color: white;
+}
+
+/****************************/
+/*-- BARRA DE NAVERGACION --*/
+/****************************/
+
+nav.abajo {
+  background-color: #e6e7e8; /*Tenemos en cuenta la variable de javaScript que se encuentra en la funcion para detectar el movimiento del scroll al final del documento index*/
+}
+
+.navbar {
+  padding: 2rem;
+  position: sticky; /*Es para que el encabezado solo se mueva en el header que abarca tambien la seccion hero. Si queremos que se mueva por todo el largo de la pagina, podriamos dejarlo como fixed */
+  top: 0;
+  background-color: #f5f6f7;
+  width: 100%;
+  transition: 0.7s;
+  z-index: 10;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar img {
+  transform: rotate(-45deg);
+}
+
+/********************/
+/*-- SECCION HERO --*/
+/********************/
+
+.hero {
+  background-color: #f5f6f7;
+  min-height: 450px;
+  text-align: center;
+}
+
+.hero-principal {
+  padding: 3rem;
+}
+
+.hero-imagen-logo {
+  width: 200px;
+  height: 200px;
+  margin: 0px 20px 20px 20px;
+}
+
+.hero-principal h2 {
+  font-size: 1.5rem;
+  color: #615151;
+}
+
+/*******************************/
+/*-- MENU INTERNO DESLIZABLE --*/
+/*******************************/
+
+.contenedor-menu-deslizable {
+  display: block; /* Por defecto le ponemos un display block para que desde un inicio se muestre en pantalla */
+  background-color: #e3ed2b;
+  padding: 10px;
+
+  width: 200px;
+  height: 120px;
+
+  border-radius: 10px;
+  position: fixed;
+
+  bottom: calc(43% - 70px);
+  right: -180px;
+  
+  z-index: 10; /* La misma capa en la que se encuentra el navegador */
+  transition: all 0.5s ease;
+}
+
+.contenedor-menu-deslizable .menu-deslizable {
+  display: flex;
+  font-size: 1.05rem;
+  color: black;
+  line-height: 25px;
+}
+
+.menu-deslizable ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.contenedor-menu-deslizable:hover {
+  transform: translateX(-135px);
+  border: none;
+  box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, 0.25);
+}
+
+.contenedor-menu-deslizable .menu-deslizable a:hover {
+  font-weight: bold;
+  color: #0a0a23;
+}
+
+/**********************/
+/*-- SOBRE NOSOTROS --*/
+/**********************/
+
+.sobre-nosotros {
+  height: 550px;
+  padding: 10px;
+}
+
+.sobre-nosotros .contenedor {
+  max-width: 600px;
+  text-align: center;
+}
+
+/************************************/
+/*-- MISION, VISION, ¿TE APUNTAS? --*/
+/************************************/
+
+.labor-proyeccion {
+  padding: 40px 40px 60px 40px;
+}
+
+.labor-proyeccion .columna {
+  padding: 20px;
+  border: 2px solid #8080804d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.2s ease-in;
+}
+
+.labor-proyeccion .columna:hover {
+  color: white;
+  background-color: #0a0a23;
+}
+
+.labor-proyeccion i {
+  font-size: 2.5rem;
+  color: #7ade30;
+  background-color: #0a0a23;
+  padding: 8px 19px;
+  border-radius: 50%;
+}
+
+.proposito-titulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badges-contenedor {
+  font-size: 20 px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badge {
+  margin: 5px;
+}
+
+/*****************************/
+/*-- PROYECTOS/EXPERIENCIA --*/
+/*****************************/
+
+.proyectos-recientes {
+  padding: 40px;
+}
+
+.proyectos-recientes img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.proyectos-contenedor {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.overlay {
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.proyecto {
+  position: relative;
+}
+
+.proyecto:hover img {
+  opacity: 0.2;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .iconos-contenedor {
+  display: flex;
+}
+
+.overlay i {
+  color: black;
+  font-size: 60px;
+  margin: 10px;
+}
+
+/*****************************************************/
+/*-- INTEGRANTES ACTUALES | NOSOTROS | TESTIMONIOS --*/
+/*****************************************************/
+
+.testimonios {
+  padding: 40px 40px 20px 40px;
+}
+
+.testimonios .carousel {
+  max-width: 800px;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonio-imagen {
+  height: 150px;
+  width: 150px;
+  margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto {
+  max-width: 70%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.testimonio-info {
+  font-weight: bold;
+  text-align: center;
+}
+
+.testimonio-info p {
+  margin-bottom: 0;
+}
+
+.testimonio-footer .integrante {
+  font-size: 1.2rem;
+}
+
+.testimonio-info .cargo {
+  font-size: 0.9rem;
+  color:#656060;
+}
+
+/****************************/
+/*-- PREGUNTAS FRECUENTES --*/
+/****************************/
+
+.preguntas-frecuentes {
+  padding: 0 0 100px 0;
+}
+
+.preguntas-frecuentes .seccion-compacta {
+  width: 70%;
+  max-width: 850px;
+  min-height: auto;
+}
+
+/****************/
+/*-- CONTACTO --*/
+/****************/
+
+.contacto .container {
+  max-width: 1100px;
+  min-height: 200px;
+  padding: 20px;
+}
+
+.contacto .rectangulo {
+  margin-top: -5rem;
+  background-color: rgb(13, 110, 253);
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 1px white; /* Sombra de la caja */
+}
+
+.contacto .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contacto .descripcion {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.contacto button {
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 1.25em 2em; /* *+ Es una unidad relativa al tamaño del texto del contenedor */
+  margin: 10px;
+  border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover { /* Cuando el cursor este sobre el boton, queremos que su color de fondo cambie a blanco y el texto cambie a negro. */
+  background-color: white;
+  color: black;
+}
+
+.contacto button i {
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.2s ease-in-out; /* *+ */
+}
+
+.contacto button:hover i { /* Cuando el cursor este sobre el boton, queremos que el icono cambie a color negro */
+  color: black;
+}
+
+/******************************/
+/*-- PIE DE PAGINA (FOOTER) --*/
+/******************************/
+
+footer {
+  min-height: 500px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  transform: rotate(45deg);
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  padding: 20px;
+  margin: 30px;
+  font-family: 'Rubik Dirt', cursive;
+}
+
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+  background-color: white;
+  border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+  color: black;
+}
+
+.derechos-de-autor {
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+  align-items: center;
+}
+
+.derechos-de-autor .desarrollador {
+  font-weight: bold;
+}
+
+.derechos-de-autor a {
+  color: #aeaeae;
+  text-decoration: none;
+}
+
+/************************/
+/*-- TEMAS DE INTERES --*/
+/************************/
+
+.noticias {
+  background-color: #f5f6f7;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.noticias-contenedor {
+  padding-top: 60px;
+}
+
+.noticias-contenedor .columna-noticia {
+  padding-bottom: 30px;
+}
+
+.noticias .card {
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.noticias .card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+/****************/
+/*-- GLOSARIO --*/
+/****************/
+
+.glosario {
+  background-color: #f5f6f7;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.glosario-contenedor {
+  padding-top: 60px;
+}
+
+.glosario-contenedor .columna-glosario {
+  padding-bottom: 30px;
+}
+
+.columna-glosario .list-group {
+  cursor: default;
+  transition: all 400ms ease; /*ease-in ease-out ease-in-out*/
+}
+
+.columna-glosario .list-group:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.columna-glosario .list-group .concepto {
+  cursor: default;
+  background-color: rgb(255, 230, 44);
+}
+
+.columna-glosario .list-group .concepto:hover {
+  font-weight: bold;
+}
+
+/*************************/
+/*-- PILDORAS, PODCAST --*/
+/*************************/
+
+.pildoras {
+  background-color: #f5f6f7;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.pildoras-contenedor {
+  padding-top: 60px;
+}
+
+.pildoras-contenedor .columna-pildora {
+  padding-bottom: 30px;
+}
+
+.pildoras .card {
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.pildoras .card:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/**************/
+/*-- CURSOS --*/
+/**************/
+
+.cursos {
+  background-color: #f5f6f7;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.cursos-contenedor {
+  max-width: 80%;
+  font-family: 'Anton', sans-serif;
+  padding-top: 20px;
+}
+
+.cursos-contenedor a {
+  text-decoration: none;
+}
+
+.cursos-contenedor h1 {
+  font-size: 10vw;
+}
+
+.cursos-contenedor .columna-curso .nombre-curso {
+  width: auto;
+  color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  background-image: url('../img/imgCurso1.jpg');
+  background-size: cover;
+  background-position-y: center;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/**************************************/
+/*-- MENSAJE (ALERTA) DE BIENVENIDA --*/
+/**************************************/
+
+.alerta-bienvenida {
+  display: block; /* Por defecto le ponemos un display block para que desde un inicio se muestre en pantalla */
+  background-color: #e3ed2b;
+  padding: 20px;
+  padding-top: 35px;
+  width: calc(100% - 40px); /* La función calc es necesaria para calcular el ancho */
+  max-width: 330px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10; /* La misma capa en la que se encuentra el navegador */
+  box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, 0.25);
+}
+
+.contenido-bienvenida {
+  display: flex;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  width: 300px;
+  height: 20px;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 10px;
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.contenido-bienvenida ul {
+  list-style: none;
+  padding-left: 8px;
+  animation: cambiar 7s infinite;
+}
+
+.contenido-bienvenida ul, p {
+  margin: 0;
+}
+
+@keyframes cambiar {
+  0% { margin-top: 0; }
+  20% { margin-top: 0; }
+
+  25% { margin-top: -20px; }
+  50% { margin-top: -20px; }
+
+  55% { margin-top: -40px; }
+  80% { margin-top: -40px; }
+
+  85% { margin-top: -20px; }
+  95% { margin-top: -20px; }
+
+  100% { margin-top: 0; }
+}
+
+/************************/
+/*-- AVISO DE COOKIES --*/
+/************************/
+
+.aviso-cookies {
+  display: none; /* Por defecto le ponemos un display block, pero lo dejamos como none, ya que no queremos que se muestre el aviso cookies a menos que se muestre la clase activo que le pusimos. Esto mismo sucede con el fondo-fijo-aviso-cookies */
+  background-color: white;
+  padding: 20px;
+  width: calc(100% - 40px); /* La función calc es necesaria para calcular el ancho */
+  max-width: 300px;
+  line-height: 150%;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  padding-top: 60px;
+  box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, 0.25);
+  text-align: center;
+}
+
+.aviso-cookies.activo {
+  display: block;
+}
+
+.aviso-cookies img {
+  max-width: 100px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px); /* Centramos las galleta */
+}
+
+.aviso-cookies .titulo,
+.aviso-cookies .parrafo {
+  margin-bottom: 15px;
+}
+
+.aviso-cookies .boton {
+  width: 100%;
+  background: #595959;
+  border: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 15px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.aviso-cookies .boton:hover {
+  background: black;
+}
+
+.aviso-cookies .enlace {
+  color: #0313fc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.aviso-cookies .enlace:hover {
+  text-decoration: underline;
+}
+
+.fondo-fijo-aviso-cookies {
+  display: none;
+  background: rgba(0,0,0,0.20);
+  position: fixed;
+  z-index: 90;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.fondo-fijo-aviso-cookies.activo {
+  display: block;
+}
+
+/**************************************/
+/*-- SECCION ADAPTABLE (RESPONSIVE) --*/
+/**************************************/
+
+@media screen and(max-width:400px) {
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+  }
+
+  .testimonio-texto {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero-inferior-imagen {
+    max-width: 600px;
+  }
+}
+
+/* Fonts */
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Rubik Dirt', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Anton', sans-serif;*/

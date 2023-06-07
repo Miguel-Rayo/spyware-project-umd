@@ -1,0 +1,69 @@
+* {
+  transition: all 0s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f0f0ff;
+}
+
+td {
+  border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+.contenedor-botones {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  background: skyblue;
+  display: inline block;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-centrar {
+  width: 65px;
+  height: 65px;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+/* Explicacion del juego */
+.mensaje-explicacion-juego {
+  cursor: default;
+  display: block; /* Por defecto le ponemos un display block para que desde un inicio se muestre en pantalla */
+  background-color: skyblue;
+  padding: 20px;
+  padding-top: 40px;
+  width: calc(100% - 40px); /* La función calc es necesaria para calcular el ancho */
+  max-width: 630px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, 0.25);
+  transition: all 400ms ease;
+}
+
+.mensaje-explicacion-juego:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1%);
+}
+
+.mensaje-explicacion-juego h3 {
+  font-family: 'Rubik Dirt', cursive;
+}
